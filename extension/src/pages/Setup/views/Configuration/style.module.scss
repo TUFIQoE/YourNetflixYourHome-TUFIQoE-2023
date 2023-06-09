@@ -1,0 +1,36 @@
+@import "../../../../config/style.config.scss";
+
+
+.configuration{
+    width: 100%;
+    min-height: 100vh;
+    background-color: $netflix-dark;
+
+    font-family: ubuntu-regular;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    min-height: 100vh;
+    padding: 5em 0;
+
+    box-sizing: border-box;
+    
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    width: 100%;
+    margin-bottom: 20px;
+}

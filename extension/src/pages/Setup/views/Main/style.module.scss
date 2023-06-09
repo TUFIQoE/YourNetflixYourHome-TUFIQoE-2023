@@ -1,0 +1,47 @@
+@import "../../../../config/style.config.scss";
+
+.main{
+    width: 100%;
+    min-height: 100vh;
+    background-color: $netflix-dark;
+
+    font-family: ubuntu-regular;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 20%;
+}
+
+.header{
+    font-size: $font-size-large;
+    color: white;
+    
+    font-family: ubuntu-medium;
+}
+.sub_header{
+    font-size: $font-size-medium;
+    color: white;
+    filter: brightness(0.8);
+    font-family: ubuntu-regular;
+}
+
+.btn_container{
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    justify-content: space-between;
+
+    min-height: 180px;
+}

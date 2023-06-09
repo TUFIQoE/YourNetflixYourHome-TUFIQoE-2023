@@ -1,0 +1,49 @@
+@import "../../../../config/style.config.scss";
+
+
+.about{
+    width: 100%;
+    min-height: 100vh;
+    background-color: $netflix-dark;
+
+    display: flex;
+    justify-content: center;
+
+    user-select: none;
+}
+.wrapper{
+    width: 50%;
+    min-height: 100%;
+    padding: 5em 0;
+    display: flex;
+    flex-direction: column;
+}
+.logo{
+    width: 35%;
+    filter: invert(1);
+    padding: 1em 0;
+
+    pointer-events: none;
+}
+.description{
+    color: white;
+    font-size: $font-size-medium;
+    margin: 1em 0;
+}
+
+
+.return_btn{
+    font-size: $font-size-small;
+    padding: 0.8em 2em;
+    width: 30%;
+    background-color: $secondary;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: auto;
+}
+.return_btn:hover{
+    filter: brightness(0.9);
+}

@@ -1,0 +1,68 @@
+@import "../../../../config/style.config.scss";
+
+
+
+.scheduler{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    margin-top: 2em;
+}
+.shutter{
+    top: 0;
+    left:0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 34, 34, 0.9);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 10;
+}
+
+.header{
+    font-family: ubuntu-medium;
+    font-size: $font-size-medium;
+    color: white;
+}
+
+.input{
+    font-size: $font-size-small;
+    font-family: ubuntu-medium;
+    padding: 10px;
+
+    outline: none;
+    border-radius: 5px;
+    border: 3px solid rgba(1,1,1,0);
+    user-select: none;
+    filter:brightness(0.95);
+
+    margin-top: 10px;
+}
+.input:hover{
+    filter:brightness(1)
+}
+.input:focus{
+    border: 3px solid $primary;
+}
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    margin-top: 2em;
+    gap: 1em;
+}
+.wrapper button{
+    width: 50%;
+}
