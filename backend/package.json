@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.20"
+  },
+  "name": "remote-server-netflix",
+  "version": "1.0.0",
+  "description": "Server to collecting data from subjects",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Matt Olszewski",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matix7290/FixYourNetflix-remote-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/matix7290/FixYourNetflix-remote-server/issues"
+  },
+  "homepage": "https://github.com/matix7290/FixYourNetflix-remote-server#readme",
+  "devDependencies": {}
+}
