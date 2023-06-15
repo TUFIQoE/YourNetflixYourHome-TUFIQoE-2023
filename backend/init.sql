@@ -1,42 +1,48 @@
 /*DROP TABLES*/
-DROP TABLE IF EXISTS playback_data;
-DROP TABLE IF EXISTS archive;
-DROP TABLE IF EXISTS `event`;
-DROP TABLE IF EXISTS video;
+DROP TABLE IF EXISTS bitrate;
 DROP TABLE IF EXISTS experiment;
+DROP TABLE IF EXISTS video;
+DROP TABLE IF EXISTS playback_data;
+DROP TABLE IF EXISTS assessment;
+DROP TABLE IF EXISTS archive;
 
 
 CREATE TABLE IF NOT EXISTS experiment(
-    id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    id INTEGER NOT NULL PRIMARY KEY,
     
     started TEXT NOT NULL,
     ended TEXT DEFAULT NULL,
-            
-    video_limit INTEGER NOT NULL,
-    subject_age INTEGER NOT NULL,
-    subject_sex TEXT NOT NULL,
-
-    subject_selected_content BOOLEAN NOT NULL,
-    subject_netflix_familiarity BOOLEAN NOT NULL,
-    content_continuation BOOLEAN NOT NULL, 
     
+    subject_id TEXT NOT NULL,
+    device_id INTEGER NOT NULL,
+    session_type TEXT NOT NULL,
+
+    subject_age INTEGER DEFAULT NULL,
+    subject_sex TEXT DEFAULT NULL,
+    subject_netflix_familiarity BOOLEAN DEFAULT NULL,
+    subject_selected_content BOOLEAN DEFAULT NULL,
+    content_continuation BOOLEAN DEFAULT NULL,
+
     settings TEXT NOT NULL,
     urls TEXT NOT NULL        
 );
 
+
 CREATE TABLE IF NOT EXISTS video(
-    id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    id INTEGER NOT NULL PRIMARY KEY,
     
     started TEXT NOT NULL,  
     ended TEXT DEFAULT NULL,    
+
     experiment_id INTEGER NOT NULL,
     url TEXT NOT NULL,
 
     FOREIGN KEY(experiment_id) REFERENCES experiment(id)
 );
 
+
 CREATE TABLE IF NOT EXISTS playback_data(
-    id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    id INTEGER NOT NULL PRIMARY KEY,
     video_id INTEGER NOT NULL,
 
     buffering_bitrate_audio TEXT,
@@ -63,7 +69,7 @@ CREATE TABLE IF NOT EXISTS playback_data(
 );
 
 CREATE TABLE IF NOT EXISTS archive(
-    id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    id INTEGER NOT NULL PRIMARY KEY,
     video_id INTEGER NOT NULL,
 
     data TEXT NOT NULL,
@@ -72,12 +78,16 @@ CREATE TABLE IF NOT EXISTS archive(
     FOREIGN KEY(video_id) REFERENCES video(id)
 );
 
-CREATE TABLE IF NOT EXISTS event(
-    id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE IF NOT EXISTS assessment(
+    id INTEGER NOT NULL PRIMARY KEY,
     video_id INTEGER NOT NULL,
-    type TEXT NOT NULL,
-    payload TEXT DEFAULT NULL,
+
+    multitasking BOOLEAN NOT NULL,
+    value INTEGER NOT NULL,
+    description TEXT NOT NULL,
+    started TEXT NOT NULL,
     timestamp TEXT NOT NULL,
+    duration REAL NOT NULL,
 
     FOREIGN KEY(video_id) REFERENCES video(id)
-)
+);
