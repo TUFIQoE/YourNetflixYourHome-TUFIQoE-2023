@@ -1,43 +1,29 @@
-module.exports = function (app, query) {
+module.exports = function (app, db) {
   app.post("/video", function (req, res) {
-    let sql = async function () {
-      let userCourse = [];
+    try {
+      // noinspection SqlInsertValues
+      db.prepare('insert into video (started, experiment_id, url) values (?, ?, ?)')
+          .run(req.body.started, req.body.experiment_id, req.body.url);
 
-      try {
-        const data = `
-            INSERT INTO video (started, experiment_id, url)
-            VALUES ('${req.body.started}', ${req.body.experiment_id}, '${req.body.url}')
-            `;
-        await query(data);
-        const rows = await query(
-          "select id from video order by id desc limit 1"
-        );
-        userCourse = rows[0].id;
+      // noinspection SqlInsertValues
+      const video_id = db.prepare('select id from video order by id desc limit 1').get();
 
-        return userCourse
-      } catch (e) {
-        console.log(e)
-      }
-    };
-
-    sql().then((value) => {
-      res.status(201).json({ video_id: value });
-    });
+      res.status(201).json({ video_id: video_id });
+    } catch (e) {
+      console.log(e);
+      res.status(500).json({ msg: "Failed" });
+    }
   });
 
   app.patch("/video", function (req, res) {
-    let sql = async function () {
       try {
-        const data = `
-            UPDATE video SET ended='${req.body.ended}' WHERE video.id=${req.body.video_id}
-            `;
-        await query(data);
-      } finally {
-      }
-    };
+        db.prepare('update video set ended = ? where id = ?')
+            .run(req.body.ended, req.body.video_id)
 
-    sql().then(() => {
-      res.status(201).json({ msg: "Video updated" });
-    });
+        res.status(201).json({ msg: "Video updated" });
+      } catch (e) {
+        console.log(e);
+        res.status(500).json({ msg: "Failed" });
+      }
   });
 };

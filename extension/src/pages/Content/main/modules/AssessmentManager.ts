@@ -316,7 +316,7 @@ export class AssessmentManager{
         // Schedule next assessment panel
         this.schedule_assessment_panel()
 
-        // /*await*/ post_assessment(data) // <-- not waiting for response
+        /*await*/ post_assessment(data) // <-- not waiting for response
     }
 }
 
