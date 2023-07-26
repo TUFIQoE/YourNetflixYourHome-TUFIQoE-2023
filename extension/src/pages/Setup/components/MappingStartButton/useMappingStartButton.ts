@@ -13,11 +13,10 @@ export const useMappingStartButton = () => {
         const url = settings.urls[variables.video_index]
 
         await ChromeStorage.set_experiment_variables(variables)
-        window.location.href = url 
+        window.location.href = url
     }
 
     return {
-        handleMappingStart,
-       
+        handleMappingStart
     }
 }

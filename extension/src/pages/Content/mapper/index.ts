@@ -39,7 +39,7 @@ const init = async () => {
         templates = VMAF_TEMPLATE[60]
     }
 
-    if(templates == undefined){
+    if(templates === undefined){
         window.alert("Error. Template not found.")
         return
     }
@@ -49,7 +49,7 @@ const init = async () => {
     const {subject_id} = await ChromeStorage.get_experiment_settings()
     let vmaf_template : Array<number>
 
-    if(config_seeding === true){
+    if(config_seeding){
         const seeded_rng = prng_alea(subject_id.toString())
         vmaf_template = templates[Math.floor(seeded_rng()*templates.length)]
     }
@@ -67,9 +67,9 @@ const init = async () => {
         vmaf_template_scenario: vmaf_template 
     })
     await ChromeStorage.update_experiment_settings_property("videos", settings.videos)
-    
+
     const mapper = new Mapper()
-    mapper.init()
+    await mapper.init()
 }
 
 const inject_netflix_controls_script = () => {

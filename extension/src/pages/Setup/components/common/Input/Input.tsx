@@ -8,6 +8,7 @@ type T_PROPS = {
     value: string | number
     handleChange: (value:string) => void
     style?: Object
+    disabled?: boolean
 }
 
 const Input = (props : T_PROPS) => {
@@ -21,6 +22,7 @@ const Input = (props : T_PROPS) => {
                 value={props.value}
                 onChange={(e) => props.handleChange(e.currentTarget.value)}
                 placeholder={props.label}
+                disabled={props.disabled}
             />
         </div>
         

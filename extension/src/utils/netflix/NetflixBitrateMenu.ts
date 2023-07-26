@@ -15,7 +15,7 @@ export class NetflixBitrateMenu{
 
     /**
      * Blocking method!
-     * Invokes Netflix's bitrate menu by calling repeatedly keybord event dispatch method
+     * Invokes Netflix's bitrate menu by calling repeatedly keyboard event dispatch method
      * Resolves when bitrate menu is invoked
      * @returns {void}
     */
@@ -37,7 +37,7 @@ export class NetflixBitrateMenu{
     }
 
     /**
-     *  Method simulates keyboard keys click in order to invoke bitrate menu programatically 
+     *  Method simulates keyboard keys click in order to invoke bitrate menu programmatically
     */
     public static dispatch_invoker_event = () : void => {
         NetflixBitrateMenu.logger.log("Dispatching keyboard event")

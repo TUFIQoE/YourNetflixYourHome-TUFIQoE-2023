@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React from "react";
 import Button from "./common/Button/Button";
 import { useExperimentStart } from "../hooks/useExperimentStart";
 import { useSelector } from "react-redux";
@@ -10,7 +10,7 @@ const ExperimentStartButton = () => {
 
     return(
         <Button 
-            text="Start experiment"
+            text="Start movie"
             disabled={!experiment_start_available || !config_valid}
             //attributes={{disabled: !setup.experimentAvailable || !subjectID}}
             handleClick={start_experiment}

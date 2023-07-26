@@ -6,7 +6,7 @@ import { Dispatch } from "redux"
 import { ChromeStorage } from "../../../utils/custom/ChromeStorage"
 import { remove_whitespaces } from "../../../utils/string_utils"
 import { T_STARTUP_FORM_ACTIONS } from "../redux/actions/startupFormActions"
-
+import {get_experiment_id} from "../../../utils/http_requests/get_experiment_id";
 
 
 
@@ -18,6 +18,13 @@ export const useSubjectIDInput = () => {
         const init = async () => {
             const settings = await ChromeStorage.get_experiment_settings()
             dispatch({type:"SET_STARTUP_FORM", key:"subject_id", payload: settings.subject_id})
+
+            const id = await get_experiment_id()
+
+            dispatch({type:"SET_STARTUP_FORM", key:"subject_id", payload: id})
+            await ChromeStorage.update_experiment_settings_property("subject_id", id)
+
+            console.log(id)
         }
         init()
     }, [])

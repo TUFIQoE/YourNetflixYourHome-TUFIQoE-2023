@@ -13,14 +13,9 @@ CREATE TABLE IF NOT EXISTS experiment(
     started TEXT NOT NULL,
     ended TEXT DEFAULT NULL,
     
-    subject_id TEXT NOT NULL,
-    device_id INTEGER NOT NULL,
-    session_type TEXT NOT NULL,
-
     subject_age INTEGER DEFAULT NULL,
     subject_sex TEXT DEFAULT NULL,
     subject_netflix_familiarity BOOLEAN DEFAULT NULL,
-    subject_selected_content BOOLEAN DEFAULT NULL,
     content_continuation BOOLEAN DEFAULT NULL,
 
     settings TEXT NOT NULL,

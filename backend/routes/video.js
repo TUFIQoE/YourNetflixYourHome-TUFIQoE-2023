@@ -3,7 +3,7 @@ module.exports = function (app, db) {
     try {
       // noinspection SqlInsertValues
       db.prepare('insert into video (started, experiment_id, url) values (?, ?, ?)')
-          .run(req.body.started, req.body.experiment_id, req.body.url);
+          .run(req.body.started, req.body.experiment_id.id, req.body.url);
 
       // noinspection SqlInsertValues
       const video_id = db.prepare('select id from video order by id desc limit 1').get();
@@ -18,7 +18,7 @@ module.exports = function (app, db) {
   app.patch("/video", function (req, res) {
       try {
         db.prepare('update video set ended = ? where id = ?')
-            .run(req.body.ended, req.body.video_id)
+            .run(req.body.ended, req.body.video_id.id)
 
         res.status(201).json({ msg: "Video updated" });
       } catch (e) {

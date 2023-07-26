@@ -29,6 +29,7 @@ export class NetflixPlayerAPI{
     public static pause_video = () : void => {
         const video = NetflixPlayerAPI.get_html_video_element()
         if(video != null){
+            // TODO handle this
             video.pause()
         }
     }

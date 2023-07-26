@@ -12,11 +12,9 @@ import { ChromeStorage } from "../../../../utils/custom/ChromeStorage";
 import { T_APP_STATE } from "../../redux/reducers";
 import { T_EXPERIMENT_SETUP_ACTIONS } from "../../redux/actions/experimentSetupActions";
 import Dropzone from "../../components/Dropzone/Dropzone";
-import ExperimentSetupForm from "../../components/ExperimentSetupForm/ExperimentSetupForm";
 import SubjectDataForm from "../../components/SubjectDataForm/SubjectDataForm";
 import ExperimentStartButton from "../../components/ExperimentStartButton";
 
-import Scheduler from "../../components/Scheduler/Scheduler";
 import { validateStartupForm } from "../../../../utils/validation/validate-startup-form";
 
 
@@ -51,7 +49,7 @@ const Experiment = () => {
         <div className={style.experiment}>
             <div className={style.container}>
                 <div className={style.wrapper}>
-                        <Header>WatchingWithFriends Experiment</Header>
+                        <Header>YourNetflixOurLab Experiment</Header>
                         <Header style={{fontSize: 20, opacity: 0.8}}>{"Experiment setup"}</Header>
                     </div>
                     <div className={style.wrapper}>
@@ -61,15 +59,10 @@ const Experiment = () => {
                         }
                     </div>
                     <div className={style.wrapper}>
-                       <ExperimentSetupForm />
-                       {
-                        startupForm.session_type === "alone" ? <SubjectDataForm /> : null
-                       }
+                        <SubjectDataForm />
                     </div>
                     <div className={style.wrapper}>
-                        {
-                            startupForm.session_type === "alone" ? <Scheduler /> : startupForm.session_type === "together" ? <ExperimentStartButton /> : null
-                        }
+                        <ExperimentStartButton />
                     </div>
             </div>
         </div>

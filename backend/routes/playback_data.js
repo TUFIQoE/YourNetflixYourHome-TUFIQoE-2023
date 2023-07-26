@@ -1,8 +1,6 @@
 module.exports = function (app, db) {
   app.post("/playback_data", async (req, res) => {
     try {
-      console.log(req.body)
-
       // Manage playback data processed by regular expressions
       // noinspection SqlInsertValues
       db.prepare(`insert
@@ -11,7 +9,7 @@ module.exports = function (app, db) {
                   (video_id, buffering_bitrate_audio, buffering_bitrate_video, buffering_state, buffering_vmaf, duration, framerate, player_state, playing_bitrate_video, playing_bitrate_audio, playing_vmaf, position, rendering_state, resolution, segment_position, timestamp, total_corrupted_frames, total_dropped_frames, total_frames, volume)
                   values
                     (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`)
-          .run(req.body.video_id, req.body.buffering_bitrate_audio, req.body.buffering_bitrate_video,
+          .run(req.body.video_id.id, req.body.buffering_bitrate_audio, req.body.buffering_bitrate_video,
               req.body.buffering_state, req.body.buffering_vmaf, req.body.duration, req.body.framerate,
               req.body.player_state, req.body.playing_bitrate_video, req.body.playing_bitrate_audio,
               req.body.playing_vmaf, req.body.position, req.body.rendering_state, req.body.resolution,
@@ -21,7 +19,7 @@ module.exports = function (app, db) {
       // Manage raw string with nerd statistics
       // noinspection SqlInsertValues
       db.prepare('insert into archive (video_id, data, timestamp) values (?, ?, ?)')
-          .run(req.body.video_id, JSON.stringify(req.body.data), req.body.timestamp)
+          .run(req.body.video_id.id, JSON.stringify(req.body.archive.data), req.body.archive.timestamp)
 
       res.status(201).json({ msg: "OK" });
     } catch (e) {

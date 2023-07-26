@@ -7,14 +7,14 @@ export class CustomPlayer {
 
     // Netflix interface elements to remove
     private elements_to_remove = [
-        "control-play-pause-pause",
-        "control-play-pause-play",
         "control-episodes",
-        "control-next"
+        "control-next",
     ]
 
     // Netflix interface elements to leave
     private elements_to_leave = [
+        "control-play-pause-pause",
+        "control-play-pause-play",
         "control-volume-off",
         "control-volume-low",
         "control-volume-medium",

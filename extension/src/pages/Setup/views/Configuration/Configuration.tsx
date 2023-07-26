@@ -35,7 +35,7 @@ const Configuration = () => {
         <div className={style.configuration}>
             <div className={style.container}>
                 <div className={style.wrapper}>
-                    <Header>WatchingWithFriends Experiment</Header>
+                    <Header>YourNetflixOurLab Experiment</Header>
                     <Header style={{fontSize: 20, opacity: 0.8}}>{"Bitrate <-> VMAF mapping"}</Header>
                 </div>
                 <div className={style.wrapper}>
@@ -45,7 +45,7 @@ const Configuration = () => {
                     }
                 </div>
                 <div className={style.wrapper}>
-                    <ConfigSeeding />
+                    {/*<ConfigSeeding />*/}
                     <URLInput />
                 </div>
                 <div className={style.wrapper}>

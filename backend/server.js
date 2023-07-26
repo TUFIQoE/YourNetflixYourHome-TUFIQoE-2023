@@ -22,6 +22,7 @@ app.use(function (req, res, next) {
 require(path.join(__dirname + "/routes/assessment"))(app, db);
 require(path.join(__dirname + "/routes/connection_test"))(app);
 require(path.join(__dirname + "/routes/experiment"))(app, db);
+require(path.join(__dirname + "/routes/id"))(app, db);
 require(path.join(__dirname + "/routes/playback_data"))(app, db);
 require(path.join(__dirname + "/routes/results"))(app, db);
 require(path.join(__dirname + "/routes/video"))(app, db);

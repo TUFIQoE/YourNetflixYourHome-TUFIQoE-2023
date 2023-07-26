@@ -12,7 +12,7 @@ const ExperimentFinished = () => {
     return(
         <div className={style.experiment_finished}>
             <span className={style.header}>Seans zakończony</span>
-            <span className={style.sub_header}>Proszę powiadomić administratora eksperymentu</span>
+            <span className={style.sub_header}>Dziękujemy za udział w eksperymencie</span>
         </div>
     )
 }

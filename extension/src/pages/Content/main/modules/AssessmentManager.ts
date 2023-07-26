@@ -1,7 +1,7 @@
 import {ChromeStorage} from "../../../../utils/custom/ChromeStorage"
 import {CustomLogger} from "../../../../utils/custom/CustomLogger"
 import {post_assessment} from "../../../../utils/http_requests/post-assessment"
-// import { NetflixPlayerAPI } from "../../../../utils/netflix/NetflixPlayerAPI"
+import { NetflixPlayerAPI } from "../../../../utils/netflix/NetflixPlayerAPI"
 import {get_local_datetime} from "../../../../utils/time_utils"
 
 
@@ -42,7 +42,7 @@ export class AssessmentManager{
     */
     public init = async () : Promise<void> => {
         await this.init_popup('multitasking', "Czy w czasie oglądanie " +
-            "wykonywał_eś_aś inne czynności skupiające twoją uwagę?", ['Tak', 'Nie'])
+            "wykonywałxś inne czynności skupiające twoją uwagę?", ['Tak', 'Nie'])
 
         await this.init_popup('quality', "Oceń jakość usługi od strony audiowizualnej",
             ["Doskonała", "Dobra", "Przeciętna", "Niska", "Zła"])
@@ -69,7 +69,16 @@ export class AssessmentManager{
             const jitter = this.calculate_jitter()
             this.logger.log(`Scheduling assessment in ${this.assessment_interval/1000} + jitter of ${jitter/1000}.`)
             setTimeout(() => {
-                this.show_assessment_panel("multitasking")
+                const video = NetflixPlayerAPI.get_html_video_element()
+
+                if (video != null) {
+                    if (!video.paused) {
+                        this.show_assessment_panel("multitasking")
+                    } else {
+                        this.schedule_assessment_panel()
+                    }
+                }
+
             }, this.assessment_interval + jitter)
         }
     }
@@ -116,13 +125,10 @@ export class AssessmentManager{
      * @returns {Promise<unknown>}
      */
 
-    // TODO stop assessment timer when video pause
-
     private init_popup = async (name: string, question: string, descriptions: string[]) : Promise<void> => {
         return new Promise(resolve => {
             const popup = document.createElement("div")
             const background = this.create_background()
-
             const buttons = this.create_buttons(name, descriptions)
             const header = this.create_header(question)
 
@@ -202,11 +208,13 @@ export class AssessmentManager{
         const buttons : HTMLButtonElement[] = []
         descriptions.forEach((text, index) => {
             const button = document.createElement("button")
-            const value = 5 - index
+            let value
 
             if(name === 'multitasking') {
+                value = 2 - index
                 button.innerText = `${text}`
             } else {
+                value = 5 - index
                 button.innerText = `${value}.  ${text}`
             }
 

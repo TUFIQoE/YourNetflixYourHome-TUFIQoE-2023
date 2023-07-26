@@ -68,9 +68,9 @@ class Mapper{
     
 
     /**
-     * Method observes nerd statistics's buffering VMAF and buffering video bitrate
+     * Method observes nerd statistics' buffering VMAF and buffering video bitrate
      * in order to match it based on expected bitrate.
-     * Method returns map item which is an object containing expected bitrate value and it's corresponding VMAF.
+     * Method returns map item which is an object containing expected bitrate value, and it's corresponding VMAF.
      * @param {number} expected_bitrate 
      * @returns {Object}
     */
@@ -123,6 +123,7 @@ class Mapper{
             this.logger.log("Mapping finished")
             variables.video_index = 0
             variables.extension_running = false
+            variables.extension_mode = "ready"
             await ChromeStorage.set_experiment_variables(variables)
             save_json(settings.videos, "complete_config.json")
 

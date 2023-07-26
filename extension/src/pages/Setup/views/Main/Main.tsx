@@ -7,7 +7,7 @@ const Main = () => {
     return(
         <div className={style.main}>
             <div className={style.container}>
-                <span className={style.header}>WatchingWithFriends Experiment</span>
+                <span className={style.header}>YourNetflixOurLab Experiment</span>
                 <span className={style.sub_header}>What would you like to do?</span>
 
                 <div className={style.btn_container}>

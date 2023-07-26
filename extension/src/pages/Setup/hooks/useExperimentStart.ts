@@ -18,14 +18,10 @@ export const useExperimentStart = () => {
         // Create new experiment entry in database
         const database_experiment_id = await post_new_experiment({
             started: timestamp,
-            subject_id: settings.subject_id,
-            device_id: settings.device_id,
-            session_type: settings.session_type,
 
             subject_age: settings.subject_age,
             subject_sex: settings.subject_sex,
             subject_netflix_familiarity: settings.subject_netflix_familiarity,
-            subject_selected_content: settings.subject_selected_content,
             content_continuation: settings.content_continuation,
 
             urls: JSON.stringify(settings.urls),
