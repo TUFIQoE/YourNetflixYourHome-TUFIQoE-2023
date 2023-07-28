@@ -12,6 +12,7 @@ module.exports = function (app, db) {
             res.end(JSON.stringify(row[0].id, null, 3));
         } catch (e) {
             console.log(e);
+            res.status(500).json({ msg: "Failed" });
         }
     });
 };

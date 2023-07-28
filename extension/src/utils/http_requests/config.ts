@@ -1,4 +1,4 @@
-export const BASE_URL = "http://127.0.0.1:5001"
+export const BASE_URL = "https://badania-it.tele.agh.edu.pl:3568"
 export const backend_urls = {
     id: `${BASE_URL}/id/`,
     experiment: `${BASE_URL}/experiment/`,
