@@ -133,3 +133,5 @@ dist
 /backend/*.db
 /backend/package-lock.json
 /backend/links.csv
+/extension/packages/
+/extension.pem
