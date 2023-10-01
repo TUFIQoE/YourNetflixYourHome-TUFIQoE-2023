@@ -15,13 +15,13 @@ const ExperimentBreak = () => {
     return(
         <div className={style.experiment_break}>
             <div className={style.wrapper}>
-                <span className={style.header}>Przerwa pomiędzy odcinkami</span>
-                <span className={style.counter_label}>Możliwość kontynuacji za chwilę</span>
+                <span className={style.header}>Break between episodes</span>
+                <span className={style.counter_label}>Option to continue in a moment</span>
                {
                 !enabled ? <Loader /> : 
                 <>
                     {
-                        resuming ? <Loader /> : <button onClick={handle_experiment_resume} className={style.resume_button}>Kontynuuj</button>
+                        resuming ? <Loader /> : <button onClick={handle_experiment_resume} className={style.resume_button}>Continue</button>
                     }
                 </>
                }

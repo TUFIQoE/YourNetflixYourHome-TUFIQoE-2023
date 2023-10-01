@@ -15,21 +15,21 @@ const SubjectDataForm = () => {
         <div className={style.subjectDataForm}>
             <div className={style.wrapper}>
                 <Input label="Subject ID" value={subject_id} handleChange={handleSubjectIDChange} style={{width: "50%"}} disabled={true}/>
-                <Input label="Subject Age" value={subject_age} handleChange={handleAgeChange} style={{width: "50%"}}/>
+                <Input label="Age" value={subject_age} handleChange={handleAgeChange} style={{width: "50%"}}/>
             </div>
 
             <Select
-                label="Subject sex"
+                label="Sex"
                 id="subject_sex"
                 options={[{label: "Male", value:"male"},{label: "Female", value:"female"},{label: "Prefer not to disclose", value:"undisclosed"}]}
             />
             <Select 
-                label="Netflix familiarity"
+                label="Are you familiar the Netflix platform?"
                 id="subject_netflix_familiarity"
                 options={[{label: "Yes", value:true},{label: "No", value:false}]}
             />
             <Select
-                label="Content continuation"
+                label="Are you continuing to watch the production?"
                 id="content_continuation"
                 options={[{label: "Yes", value: true},{label: "No", value: false}]}
             />

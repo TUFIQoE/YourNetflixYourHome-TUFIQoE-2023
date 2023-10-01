@@ -1,9 +1,9 @@
 /*DROP TABLES*/
 DROP TABLE IF EXISTS "archive";
 DROP TABLE IF EXISTS "assessment";
-DROP TABLE IF EXISTS "experiment";
 DROP TABLE IF EXISTS "playback_data";
 DROP TABLE IF EXISTS "video";
+DROP TABLE IF EXISTS "experiment";
 
 
 CREATE TABLE "archive" (
@@ -18,14 +18,10 @@ CREATE TABLE "archive" (
 CREATE TABLE "assessment" (
 	"id"	INTEGER NOT NULL,
 	"video_id"	INTEGER NOT NULL,
-	"multitasking_value"	BOOLEAN NOT NULL,
-	"multitasking_description"	TEXT NOT NULL,
-	"multitasking_started"	TEXT NOT NULL,
-	"multitasking_duration"	TEXT NOT NULL,
 	"quality_value"	INTEGER NO NOT NULL,
 	"quality_description"	TEXT NOT NULL,
-	"quality_started"	TEXT NOT NULL,
-	"quality_duration"	REAL NOT NULL,
+	"started"	TEXT NOT NULL,
+	"duration"	REAL NOT NULL,
 	"timestamp"	TEXT NOT NULL,
 	PRIMARY KEY("id"),
 	FOREIGN KEY("video_id") REFERENCES "video"("id")
@@ -41,6 +37,7 @@ CREATE TABLE "experiment" (
 	"content_continuation"	BOOLEAN DEFAULT NULL,
 	"settings"	TEXT NOT NULL,
 	"urls"	TEXT NOT NULL,
+	"qualtrics"	TEXT NOT NULL,
 	PRIMARY KEY("id")
 );
 

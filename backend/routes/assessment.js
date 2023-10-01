@@ -5,9 +5,9 @@ module.exports = function (app, db) {
             db.prepare(`insert
                         into
                             assessment
-                            (video_id, multitasking_value, multitasking_description, multitasking_started, multitasking_duration, quality_value, quality_description, quality_started, quality_duration, timestamp)
+                            (video_id, quality_value, quality_description, started, duration, timestamp)
                         values
-                            (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`)
+                            (?, ?, ?, ?, ?, ?)`)
                 .run(req.body.video_id.id, req.body.multitasking.value, req.body.multitasking.description,
                     req.body.multitasking.started, req.body.multitasking.duration, req.body.quality.value,
                     req.body.quality.description, req.body.quality.started, req.body.quality.duration, req.body.timestamp);

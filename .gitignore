@@ -132,3 +132,4 @@ dist
 /backend/temp/
 /backend/*.db
 /backend/package-lock.json
+/backend/links.csv

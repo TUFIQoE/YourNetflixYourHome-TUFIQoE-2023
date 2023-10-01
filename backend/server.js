@@ -1,5 +1,6 @@
 const express = require("express");
 const db = require('better-sqlite3')('./database.db', {fileMustExist: true});
+const links = require('better-sqlite3')('./links.db', {fileMustExist: true});
 const path = require("path");
 
 const app = express();
@@ -21,11 +22,12 @@ app.use(function (req, res, next) {
 
 require(path.join(__dirname + "/routes/assessment"))(app, db);
 require(path.join(__dirname + "/routes/connection_test"))(app);
-require(path.join(__dirname + "/routes/experiment"))(app, db);
+require(path.join(__dirname + "/routes/experiment"))(app, db, links);
 require(path.join(__dirname + "/routes/id"))(app, db);
 require(path.join(__dirname + "/routes/playback_data"))(app, db);
 require(path.join(__dirname + "/routes/results"))(app, db);
 require(path.join(__dirname + "/routes/video"))(app, db);
+require(path.join(__dirname + "/routes/link"))(app, db);
 
 app.get("/", (req, res) => {
   res.send(`App listening on port ${port}`)

@@ -43,7 +43,7 @@ export const STORAGE_DEFAULT : T_STORAGE = {
         stats_record_interval_ms: 1 * 1000, // default 1s=1000ms
         stats_nonclickable: true,
         stats_invisible: false,
-        bitrate_interval_ms: 2.5 * 60 * 1000, // default 2.5min=150sec=150*1000
+        bitrate_interval_ms: 1.5 * 60 * 1000, // default 2.5min=150sec=150*1000; changed to 1.5 in
         assessment_interval_ms: 2.5 * 60 * 1000, // default 2.5min=150sec=150*1000
         
         config_seeding: false,

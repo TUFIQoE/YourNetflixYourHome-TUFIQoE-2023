@@ -28,6 +28,9 @@ export const useExperimentStart = () => {
             videos: JSON.stringify(settings.videos),
             settings: JSON.stringify(settings)
         })
+
+        console.log(database_experiment_id)
+
         if(database_experiment_id == null){
             setExperimentStarting(false)
             window.alert("Could not create experiment entry. Check server connection.")

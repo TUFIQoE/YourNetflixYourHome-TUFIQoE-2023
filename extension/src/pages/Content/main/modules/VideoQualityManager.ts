@@ -4,6 +4,7 @@ import { ChromeStorage } from "../../../../utils/custom/ChromeStorage";
 import { wait_for_video_to_load } from "../../../../utils/waiters/wait_for_video_to_load";
 import { NetflixBitrateMenu } from "../../../../utils/netflix/NetflixBitrateMenu";
 import { NetflixPlayerAPI } from "../../../../utils/netflix/NetflixPlayerAPI";
+import { simulate_nerd_stats_hotkey } from "../../../../utils/keyboard_hotkeys/simulate_nerd_stats_hotkey"
 
 export class VideoQualityManager {
     private scenario : T_SCENARIO_ITEM[] | undefined
@@ -67,10 +68,12 @@ export class VideoQualityManager {
     }
 
     private reset_playback = async () : Promise<void> => {
+        simulate_nerd_stats_hotkey()
         const video_duration = NetflixPlayerAPI.get_video_duration()
         NetflixPlayerAPI.seek(Math.round(video_duration/2)) 
         NetflixPlayerAPI.seek(Math.round(video_duration/4)) 
         NetflixPlayerAPI.seek(0)                            // seek to the beginning of the video
+
     }
 
     
