@@ -13,10 +13,10 @@ module.exports = function (app, db, links) {
             db.prepare(`insert
                         into
                             experiment
-                        (started, subject_age, subject_sex, subject_netflix_familiarity, content_continuation, settings, urls, qualtrics)
+                        (secret_word, started, subject_age, subject_sex, subject_netflix_familiarity, content_continuation, settings, urls, qualtrics)
                         values
-                            (?, ?, ?, ?, ?, ?, ?, ?)`)
-                .run(req.body.started, req.body.subject_age, req.body.subject_sex, req.body.subject_netflix_familiarity,
+                            (?, ?, ?, ?, ?, ?, ?, ?, ?)`)
+                .run(req.body.secret_word, req.body.started, req.body.subject_age, req.body.subject_sex, req.body.subject_netflix_familiarity,
                     req.body.content_continuation, JSON.stringify(req.body.settings), JSON.stringify(req.body.urls), link.link);
 
             const last_id = db.prepare('select id from experiment order by id desc limit 1').get();

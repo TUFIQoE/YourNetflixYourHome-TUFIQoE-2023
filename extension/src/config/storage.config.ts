@@ -17,6 +17,7 @@ export type T_EXPERIMENT_SETTINGS = {
     session_type : "" | "alone" | "together"
 
     subject_id: "" | number
+    secret_word: "" | string
     subject_age : "" | number
     subject_sex : "" | "male" | "female" | "undisclosed"
     subject_netflix_familiarity : "" | boolean
@@ -54,6 +55,7 @@ export const STORAGE_DEFAULT : T_STORAGE = {
         device_id: 106,
         session_type: "",
         subject_id: "",
+        secret_word: "",
         subject_sex: "",
         subject_age: "",
         subject_netflix_familiarity: "",

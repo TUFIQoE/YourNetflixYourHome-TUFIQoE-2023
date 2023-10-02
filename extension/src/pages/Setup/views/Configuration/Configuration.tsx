@@ -35,8 +35,8 @@ const Configuration = () => {
         <div className={style.configuration}>
             <div className={style.container}>
                 <div className={style.wrapper}>
-                    <Header>YourNetflixOurLab Experiment</Header>
-                    <Header style={{fontSize: 20, opacity: 0.8}}>{"Bitrate <-> VMAF mapping"}</Header>
+                    <Header>Eksperyment YourNetflixYourHome</Header>
+                    <Header style={{fontSize: 20, opacity: 0.8}}>{"Mapowanie"}</Header>
                 </div>
                 <div className={style.wrapper}>
                     <ConfigurationStatus />

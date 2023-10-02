@@ -6,7 +6,7 @@ import { useConfigSeeding } from "./useConfigSeeding";
 
 
 const ConfigSeeding = () => {
-    const {subject_id, handleChange:handleIDChange} = useSubjectIDInput()
+    const {secret_word, handleChange:handleIDChange} = useSubjectIDInput()
     const {seeding, handleChange:handleMirroringChange} = useConfigSeeding()
 
     return(
@@ -17,7 +17,7 @@ const ConfigSeeding = () => {
             </div>
             {
                 seeding ? <div className={style.wrapper}>
-                <Input label="Subject ID" value={subject_id} handleChange={handleIDChange}/>
+                <Input label="SecretW ord" value={secret_word} handleChange={handleIDChange}/>
             </div> : null
             }
            

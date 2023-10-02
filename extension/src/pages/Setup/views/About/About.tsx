@@ -13,9 +13,9 @@ const About = () => {
             <div className={style.wrapper}>
                 <img className={style.logo} src={logo} alt=""/>
                 <span className={style.description}>
-                    Project: “Towards Better Understanding of Factors Influencing the QoE by More Ecologically-Valid Evaluation Standards”; acronym TUFIQoE registration number 2019/34/H/ST6/00599 obtained funding as part of the GRIEG Polish-Norwegian competition research projects financed from the Norwegian Financial Mechanism for 2014-2021
+                    Projekt: „W kierunku lepszego zrozumienia czynników wpływających na QoE poprzez bardziej ekologicznie uzasadnione standardy oceny”; akronim TUFIQoE numer rejestracyjny 2019/34/H/ST6/00599 uzyskał dofinansowanie w ramach projektów badawczych konkursu polsko-norweskiego GRIEG finansowanych z Norweskiego Mechanizmu Finansowego na lata 2014-2021.
                 </span>
-                <button className={style.return_btn} onClick={() => {navigate("/", {replace: true})}}>Return</button>
+                <button className={style.return_btn} onClick={() => {navigate("/", {replace: true})}}>Powrót</button>
             </div>
         </div>
         </>   

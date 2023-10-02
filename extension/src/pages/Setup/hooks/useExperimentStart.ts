@@ -19,6 +19,7 @@ export const useExperimentStart = () => {
         const database_experiment_id = await post_new_experiment({
             started: timestamp,
 
+            secret_word: settings.secret_word,
             subject_age: settings.subject_age,
             subject_sex: settings.subject_sex,
             subject_netflix_familiarity: settings.subject_netflix_familiarity,
@@ -28,8 +29,6 @@ export const useExperimentStart = () => {
             videos: JSON.stringify(settings.videos),
             settings: JSON.stringify(settings)
         })
-
-        console.log(database_experiment_id)
 
         if(database_experiment_id == null){
             setExperimentStarting(false)

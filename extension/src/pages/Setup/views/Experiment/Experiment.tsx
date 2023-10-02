@@ -49,8 +49,8 @@ const Experiment = () => {
         <div className={style.experiment}>
             <div className={style.container}>
                 <div className={style.wrapper}>
-                        <Header>YourNetflixOurLab Experiment</Header>
-                        <Header style={{fontSize: 20, opacity: 0.8}}>{"Experiment setup"}</Header>
+                        <Header>Eksperyment YourNetflixYourHome</Header>
+                        <Header style={{fontSize: 20, opacity: 0.8}}>{"Konfiguracja sesji"}</Header>
                     </div>
                     <div className={style.wrapper}>
                         <ConfigurationStatus />

@@ -8,7 +8,7 @@ const ConfigurationStatus = () => {
     const setup = useSelector((state:T_APP_STATE) => state.experimentSetup)
     return(
         <div className={style.configurationStatus}>
-            <Header style={{fontSize: 20}}>Configuration status: <span className={style.status}>{setup.config_valid ? "detected" : "not detected"}</span></Header>
+            <Header style={{fontSize: 20}}>Status konfiguracji: <span className={style.status}>{setup.config_valid ? "znaleziona" : "nie znaleziona"}</span></Header>
         </div>
     )
 }

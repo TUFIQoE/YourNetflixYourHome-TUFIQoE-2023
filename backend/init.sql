@@ -29,6 +29,7 @@ CREATE TABLE "assessment" (
 
 CREATE TABLE "experiment" (
 	"id"	INTEGER NOT NULL,
+	"secret_word"	TEXT NOT NULL,
 	"started"	TEXT NOT NULL,
 	"ended"	TEXT DEFAULT NULL,
 	"subject_age"	INTEGER DEFAULT NULL,

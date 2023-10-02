@@ -10,7 +10,7 @@ const ExperimentStartButton = () => {
 
     return(
         <Button 
-            text="Start movie"
+            text="Rozpocznij seans"
             disabled={!experiment_start_available || !config_valid}
             //attributes={{disabled: !setup.experimentAvailable || !subjectID}}
             handleClick={start_experiment}

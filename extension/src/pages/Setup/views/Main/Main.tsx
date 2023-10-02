@@ -7,13 +7,13 @@ const Main = () => {
     return(
         <div className={style.main}>
             <div className={style.container}>
-                <span className={style.header}>YourNetflixOurLab Experiment</span>
-                <span className={style.sub_header}>What would you like to do?</span>
+                <span className={style.header}>Eksperyment YourNetflixYourHome</span>
+                <span className={style.sub_header}>Co chcesz zrobić?</span>
 
                 <div className={style.btn_container}>
-                    <NavButton text="Configuration" to="configuration"/>
-                    <NavButton text="Experiment" to="experiment"/>
-                    <NavButton text="About" to="about"/>
+                    <NavButton text="Konfiguracja" to="configuration"/>
+                    <NavButton text="Eksperyment" to="experiment"/>
+                    <NavButton text="O nas" to="about"/>
                 </div>
             </div>
         </div>

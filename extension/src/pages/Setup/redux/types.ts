@@ -15,6 +15,7 @@ interface I_INDEX_SIGNATURE {
 interface I_STARTUP_FORM {
     device_id: T_EXPERIMENT_SETTINGS["device_id"]
     subject_id: T_EXPERIMENT_SETTINGS["subject_id"]
+    secret_word: T_EXPERIMENT_SETTINGS["secret_word"]
     session_type: T_EXPERIMENT_SETTINGS["session_type"]
     subject_age: T_EXPERIMENT_SETTINGS["subject_age"]
     subject_sex: T_EXPERIMENT_SETTINGS["subject_sex"]

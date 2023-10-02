@@ -17,7 +17,7 @@ const URLInput = () => {
                     )
                 })
             }
-            <button onClick={handleUrlAdd} className={style.addUrl}>Add url</button>
+            <button onClick={handleUrlAdd} className={style.addUrl}>Dodaj link</button>
         </div>
     )
 }

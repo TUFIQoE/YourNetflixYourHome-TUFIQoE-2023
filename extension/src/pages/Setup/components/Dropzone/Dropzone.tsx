@@ -11,7 +11,7 @@ const Dropzone = () => {
     
     return(
         <div className={style.dropzone} onDragOver={handleDragOver} onDragEnter={handleDragEnter} onDragLeave={handleDragLeave} onDrop={handleDrop}>
-            <span className={style.text}>Drop config file here to continue</span>
+            <span className={style.text}>Upuść plik konfiguracyjny, aby kontynuować</span>
         </div>
     )
 }

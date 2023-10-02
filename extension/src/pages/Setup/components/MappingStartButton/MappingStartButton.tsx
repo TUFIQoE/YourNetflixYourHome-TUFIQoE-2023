@@ -17,7 +17,7 @@ const MappingStartButton = (props : T_PROPS) => {
 
     return(
         <Button
-            text="Start mapping"
+            text="Rozpocznij mapowanie"
             style={{
                 backgroundColor: "#02C39A"
             }}

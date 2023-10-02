@@ -15,7 +15,7 @@ const ConfigurationEraseButton = () => {
     }
 
     return(
-        <Button text="Erase" handleClick={handleErase} style={{backgroundColor: "#a4243bff", width: "auto", padding: "10px 25px", marginTop: "5px"}}/>
+        <Button text="Wyczyść" handleClick={handleErase} style={{backgroundColor: "#a4243bff", width: "auto", padding: "10px 25px", marginTop: "5px"}}/>
     )
 }
 
