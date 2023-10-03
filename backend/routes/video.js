@@ -3,7 +3,7 @@ module.exports = function (app, db) {
     try {
       // noinspection SqlInsertValues
       db.prepare('insert into video (started, experiment_id, url) values (?, ?, ?)')
-          .run(req.body.started, req.body.experiment_id.id, req.body.url);
+          .run(req.body.started, req.body.experiment_id, req.body.url);
 
       // noinspection SqlInsertValues
       const video_id = db.prepare('select id from video order by id desc limit 1').get();
