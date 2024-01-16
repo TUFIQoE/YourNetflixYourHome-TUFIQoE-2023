@@ -8,19 +8,8 @@ const path = require("path");
 const app = express();
 const port = process.env.PORT || 3568;
 
-// Certificate
-const privateKey = fs.readFileSync('/var/www/server-node-ynol/backend/badania-it.tele.agh.edu.pl/privkey.pem', 'utf8');
-const certificate = fs.readFileSync('/var/www/server-node-ynol/backend/badania-it.tele.agh.edu.pl/cert.pem', 'utf8');
-const ca = fs.readFileSync('/var/www/server-node-ynol/backend/badania-it.tele.agh.edu.pl/chain.pem', 'utf8');
-
-const credentials = {
-        key: privateKey,
-        cert: certificate,
-        ca: ca
-};
-
 // Starting https server
-const httpsServer = https.createServer(credentials, app);
+const httpsServer = https.createServer(app);
 
 // noinspection JSCheckFunctionSignatures
 app.use(express.json());
