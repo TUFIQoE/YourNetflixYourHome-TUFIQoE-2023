@@ -1,7 +1,7 @@
 {
-  "name": "watching-with-friends-netflix-qoe-experiment",
-  "version": "4.3.5",
-  "description": "",
+  "name": "your-netflix-your-home-netflix-qoe-experiment",
+  "version": "5.0.3",
+  "description": "<img src=\"src/assets/img/icon-128.png\" width=\"64\"/>",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -80,5 +80,7 @@
     "webpack": "^5.68.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
-  }
+  },
+  "main": "jest.config.js",
+  "author": "Rafal Figlus, Mateusz Olszewski"
 }

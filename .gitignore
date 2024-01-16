@@ -135,3 +135,6 @@ dist
 /backend/links.csv
 /extension/packages/
 /extension.pem
+/database_backup/
+*.zip
+/backup_database.sh

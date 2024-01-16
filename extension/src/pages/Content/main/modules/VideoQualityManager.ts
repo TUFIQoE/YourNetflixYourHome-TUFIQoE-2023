@@ -4,7 +4,7 @@ import { ChromeStorage } from "../../../../utils/custom/ChromeStorage";
 import { wait_for_video_to_load } from "../../../../utils/waiters/wait_for_video_to_load";
 import { NetflixBitrateMenu } from "../../../../utils/netflix/NetflixBitrateMenu";
 import { NetflixPlayerAPI } from "../../../../utils/netflix/NetflixPlayerAPI";
-import { simulate_nerd_stats_hotkey } from "../../../../utils/keyboard_hotkeys/simulate_nerd_stats_hotkey"
+import {simulate_nerd_stats_hotkey} from "../../../../utils/keyboard_hotkeys/simulate_nerd_stats_hotkey";
 
 export class VideoQualityManager {
     private scenario : T_SCENARIO_ITEM[] | undefined
@@ -23,19 +23,19 @@ export class VideoQualityManager {
         this.bitrate_interval = await this.prepare_bitrate_interval()
         this.iterator = this.scenario_iterator()
 
-        await this.set_bitrate() // <-- set first bitrate
+        // await this.set_bitrate() // <-- set first bitrate
         await this.reset_playback() // <-- reset video, rewind to beginning in order to apply set bitrate
         NetflixPlayerAPI.set_video_muted(false) // <-- unmute video, could be muted because of previous mapping
         
         // Set another bitrate and start cyclic bitrate changes after some delay
-        setTimeout(async () => {
-            await this.set_bitrate()
-
-            // Start cyclic bitrate changes
-            setInterval(async () => {
-                await this.set_bitrate()
-            }, this.bitrate_interval)
-        }, 10e3)
+        // setTimeout(async () => {
+        //     await this.set_bitrate()
+        //
+        //     // Start cyclic bitrate changes
+        //     setInterval(async () => {
+        //         await this.set_bitrate()
+        //     }, this.bitrate_interval)
+        // }, 10e3)
     }
 
     /**
@@ -68,12 +68,10 @@ export class VideoQualityManager {
     }
 
     private reset_playback = async () : Promise<void> => {
-        simulate_nerd_stats_hotkey()
         const video_duration = NetflixPlayerAPI.get_video_duration()
         NetflixPlayerAPI.seek(Math.round(video_duration/2)) 
         NetflixPlayerAPI.seek(Math.round(video_duration/4)) 
         NetflixPlayerAPI.seek(0)                            // seek to the beginning of the video
-
     }
 
     

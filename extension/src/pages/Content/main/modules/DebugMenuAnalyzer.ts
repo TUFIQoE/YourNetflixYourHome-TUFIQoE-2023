@@ -14,6 +14,7 @@ import { patch_experiment_ended } from "../../../../utils/http_requests/patch_ex
 export class DebugMenuAnalyzer{
     private logger : CustomLogger
     private debug_menu : HTMLTextAreaElement | undefined
+    private debug_menu_div: HTMLDivElement | undefined
     private interval : ReturnType<typeof setInterval> | undefined
 
     constructor(){
@@ -23,6 +24,8 @@ export class DebugMenuAnalyzer{
     public init = async () : Promise<void> => {
         this.logger.log(`Initializing...`)
         this.debug_menu = await NetflixDebugMenu.get_html_element()
+        this.debug_menu_div = document.getElementsByClassName("player-info")[0] as HTMLDivElement
+        this.debug_menu_div.style.opacity = "0" // <-- hide debug menu
         await this.start_debug_menu_recording()
     }
 

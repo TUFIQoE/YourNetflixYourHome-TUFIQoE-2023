@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "YourNetflixOurLab Crowdsource",
-  "description": "AGH-TUFIQoE-2023 Netflix Experiment || Chrome Extension by Rafal Figlus",
+  "name": "YourNetflixYourHome PL",
+  "description": "AGH-TUFIQoE-2023 Netflix Experiment ||\n Chrome Extension by Rafal Figlus ||\n Modify by Mateusz Olszewski",
   "background": {
     "service_worker": "background.bundle.js"
   },
