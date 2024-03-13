@@ -230,3 +230,10 @@ Backend
   ]
 }
 ```
+
+# CREDITS
+All work was done within the TUFIQoE experiment at [AGH University of Science and Technology](https://www.agh.edu.pl/en/) in Kraków, Poland. The team members are:
+- **Lucjan Janowski** - product owner, concepts
+- **Mateusz Olszewski** - project leader, server, testing, documentation. contact: [mbolszewski@student.agh.edu.pl](mailto:mbolszewski@student.agh.edu.pl), treat me as a **contact person** for this project
+- **Rafał Figlus** - web extension
+- **Gabriela Wielgus** - experiment leader
