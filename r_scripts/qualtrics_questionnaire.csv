@@ -1,0 +1,33 @@
+StartDate;EndDate;Status;Progress;Duration (in seconds);Finished;RecordedDate;ResponseId;DistributionChannel;UserLanguage;Q2;Q3;Q4;Q5;Q6;Q7_1;Q8;Q9;Q10_1
+Start Date;End Date;Response Type;Progress;Duration (in seconds);Finished;Recorded Date;Response ID;Distribution Channel;User Language;Please, insert your secret word;"When you usually watch videos, how often are you engaged in other activities?
+
+e.g. cooking, eating, texting, playing games, etc.";"What are those activities? We are interested in any form of multitasking
+
+e.g. cooking, eating, texting, playing games, etc.";Why aren't you engaging in other activities?;"Were you engaged in other activities while taking the test?
+
+e.g. cooking, eating, texting, playing games etc.";"On a scale of 1 to 10, how engaged were you in other activities while watching?
+
+where 1 means no engagement in any other activities, and 10 indicates total focus on other activities rather than watching - Mark on the scale";"What were those activities in which you were engaged? We are interested in any form of multitasking
+
+e.g. cooking, eating, texting, playing games etc.";Why weren't you focusing on other activities?;"On a scale from 1 to 10, how much did you like the movie?
+
+where 1 means you didn't like it at all, and 10 means you liked it very much - Mark on the scale"
+2023-11-07 16:36:36;2023-11-07 16:37:54;IP Address;100;77;True;2023-11-07 16:37:54;R_1o0AT2vxIlfqh9g;gl;PL;królowa;Rarely;brak szczególnych, sprawdziłem telefon co jakis czas;;No;3;;;10
+2023-11-08 19:27:57;2023-11-08 19:30:30;IP Address;100;153;True;2023-11-08 19:30:30;R_3n8JSinBHe1RuSL;gl;PL;królowa;Rarely;przegladanie rzeczy w telefonie i pisanie wiadomosci;;No;1;;nie sięgnąłem po komórkę, nikt nie napisał, nie zadzwonił, nie byłem ani na moment znudzony;10
+2023-11-09 12:39:19;2023-11-09 12:40:40;IP Address;100;80;True;2023-11-09 12:40:41;R_3kHwI0CXf1TY0uy;gl;PL;kot;Sometimes;"pisanie wiadomości
+";;No;2;;serial był ciekawy;10
+2023-11-10 20:06:54;2023-11-10 20:07:47;IP Address;100;52;True;2023-11-10 20:07:48;R_1gvFyKT8OQ4B7mP;gl;PL;kot;Rarely;gadałem przez telefon;;to some extent;3;Gadanie przez telefon;;5
+2023-11-16 23:53:27;2023-11-16 23:54:09;IP Address;100;42;True;2023-11-16 23:54:10;R_3L0bTWnySc2oAFf;gl;PL;kot;Sometimes;nic;;No;1;;nie chciałem;8
+2023-11-07 10:13:11;2023-11-07 10:14:49;IP Address;100;98;True;2023-11-07 10:14:50;R_yIkZ0UAXMMMMQzT;gl;PL;stolarz;Sometimes;Przebieranie się, jedzenie śniadania, mycie zębów, czytanie w internecie o postaciach z serialu.;;to some extent;3;Jedzenie śniadania, mycie zębów, czytanie wikipedii.;;9
+2023-11-07 14:18:26;2023-11-07 14:19:27;IP Address;100;60;True;2023-11-07 14:19:28;R_3kjg94OpdUjfc3f;gl;PL;stolarz;Sometimes;Jedzenie, rozmowa, projekt na studia;;to some extent;5;Jedzenie, poprawianie prezentacji na studia.;;9
+2023-11-01 22:48:28;2023-11-01 22:57:12;IP Address;100;524;True;2023-11-01 22:57:13;R_SGXQQ8jfl6nhce5;anonymous;PL;stacja;Sometimes;picie herbaty, przebieranie sie, sprawdzanie telefonu ;;to some extent;3;sprawdzanie telefonu, przebieranie sie;;8
+2023-11-07 20:49:50;2023-11-07 20:51:27;IP Address;100;96;True;2023-11-07 20:51:27;R_2D61wnScf0XyXXK;anonymous;PL;stacja;Rarely;pisanie wiadomości na messengerze;;No;2;;film był wciągający i chciałem odpocząć tylko oglądając go;8
+2023-11-17 21:30:23;2023-11-17 21:31:23;IP Address;100;60;True;2023-11-17 21:31:24;R_3QRXaHhLTG8YC9A;gl;PL;pająk;Sometimes;Jadłem, piłem, robiłem kawę, pisałem wiadomości;;to some extent;3;Jadłem, piłem, robiłem kawę, pisałem wiadomości;;9
+2023-11-18 00:08:25;2023-11-18 00:09:14;IP Address;100;49;True;2023-11-18 00:09:15;R_1hMahkq7cCDnrTa;gl;PL;pająk;Sometimes;jedzenie, pisanie wiadomości, granie w gry, picie kawy;;to some extent;3;jedzenie, picie kawy, pisanie wiadomości, granie w gry;;10
+2023-12-19 02:47:10;2023-12-19 02:49:34;IP Address;100;144;True;2023-12-19 02:49:36;R_4rH0oeZqzNtdSO6;gl;PL;banan;Often;Nie robiłem nic innego;;No;1;;wolałem skupić się na oglądaniu;5
+2023-12-28 02:49:13;2023-12-28 02:51:02;IP Address;100;109;True;2023-12-28 02:51:03;R_1kzlkC5YZdMM2AW;gl;PL;banan;Sometimes;"sprzątałem mieszkanie i rysowałem
+";;to some extent;8;sprzątanie mieszkania, rysowanie, robienie kolacji;;6
+2023-12-30 23:57:28;2023-12-30 23:59:20;IP Address;100;111;True;2023-12-30 23:59:21;R_7yQSq0SxR5LEwOl;gl;PL;gęś;Sometimes;Przeglądanie mediów społecznościowych;;to some extent;5;Przeglądanie mediów społecznościowych;;9
+2023-12-31 13:15:44;2023-12-31 13:16:37;IP Address;100;53;True;2023-12-31 13:16:39;R_42PHHvSFTRWNAzm;gl;PL;gęś;Sometimes;Pisanie wiadomości;;to some extent;4;Pisanie wiadomości;;8
+2023-12-31 20:19:08;2023-12-31 20:20:07;IP Address;100;58;True;2023-12-31 20:20:08;R_7MG4ja1YTEW41cM;gl;PL;gęś;Sometimes;Przeglądanie mediów spolecznościowych;;to some extent;2;Przeglądanie mediów społecznościowych;;9
+2023-12-31 22:06:31;2023-12-31 22:07:40;IP Address;100;68;True;2023-12-31 22:07:41;R_7UaZxSbvIJyZIZx;gl;PL;gęś;Sometimes;Przeglądanie mediów społecznościowych;;Yes;6;Przeglądanie mediów społecznościowych;;6

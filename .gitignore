@@ -128,6 +128,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+*.db
 .DS_Store
 /backend/temp/
 /backend/*.db
@@ -138,3 +140,7 @@ dist
 /database_backup/
 *.zip
 /backup_database.sh
+.Rproj.user
+/r_scripts/temp/
+r_scripts/.RData
+r_scripts/.Rhistory
