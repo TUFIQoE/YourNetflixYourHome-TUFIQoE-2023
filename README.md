@@ -237,3 +237,9 @@ All work was done within the TUFIQoE experiment at [AGH University of Science an
 - **Mateusz Olszewski** - project leader, server, testing, documentation. contact: [mbolszewski@student.agh.edu.pl](mailto:mbolszewski@student.agh.edu.pl), treat me as a **contact person** for this project
 - **Gabriela Wielgus** - experiment leader
 - **Rafał Figlus** - web extension
+
+# Acknowledgments
+
+The software development leading to this repository has received funding from the Norwegian Financial Mechanism 2014-2021 under project 2019/34/H/ST6/00599.
+
+
